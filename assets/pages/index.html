@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Node.js Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: all 1s ease-out;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        .humor {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My Node.js Project</h1>
+    <p>Where ducks, hens, and geese live peacefully in the digital world!</p>
+
+    <h2>API Endpoints:</h2>
+    <ul>
+        <li><a href="/">/</a> - Get general information</li>
+        <li><a href="/info">/info</a> - Get API endpoints information</li>
+        <li><a href="/story">/story</a> - Explore an intriguing story</li>
+        <li><a href="/file/story.txt">/file/:filename</a> - Get the content of a text file</li>
+        <li><a href="/objects/positive/duck">/objects/:character/:type</a> - Get a specific object by character and animal types</li>
+        <li><a href="/objects/positive">/objects/:character</a> - Get objects by character type</li>
+        <li><a href="/objects">/objects</a> - Get all objects</li>
+    </ul>
+
+    <h2>Some Random Image:</h2>
+    <img id="changingImage" src="https://random.imagecdn.app/500/500" alt="Mysterious File" />
+
+    <h2 class="humor">Humor Corner:</h2>
+    <p class="humor">Why do programmers prefer dark mode? Because light attracts bugs!</p>
+
+    <script>
+        setInterval(() => {
+            const changingImage = document.getElementById('changingImage');
+            const width = Math.floor(changingImage.width * (Math.random() * 0.2 + 0.9));
+            const height = Math.floor(changingImage.height * (Math.random() * 0.2 + 0.9));
+            changingImage.src = `https://random.imagecdn.app/${width}/${height}`;
+        }, 4000);
+    </script>
+</body>
+
+</html>
